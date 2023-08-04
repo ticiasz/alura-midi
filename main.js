@@ -18,7 +18,7 @@ let contador = 0;
 while (contador < listaDeTeclas.length){
     listaDeTeclas[contador].onclick = tocaSomPom;
 
-    //iterando o contador
+    //incrementando o contador
     contador = contador + 1;
 
     console.log(contador);
