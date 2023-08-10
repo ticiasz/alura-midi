@@ -28,8 +28,11 @@ while (contador < listaDeTeclas.length){
     //acessando uma das classes do botão
     const instrumento = tecla.classList[1];
 
+    //template string - "abrindo" espaço de código dentro de uma string
+    const idAudio = `#som_${instrumento}`;
+
     tecla.onclick = function (){
-        tocaSom();
+        tocaSom(idAudio);
     }
     //criando uma função anônima, pois se colocasse direto a função com um parâmetro ele iria rodar o som sem o usuário ter feito nada
 
