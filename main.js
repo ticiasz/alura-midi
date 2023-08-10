@@ -21,7 +21,14 @@ let contador = 0;
 //percorrendo uma lista
 //enquanto o contador for menor que o tamanho da lista de teclas
 while (contador < listaDeTeclas.length){
-    listaDeTeclas[contador].onclick = function (){
+
+    //criando uma constante para um valor muito usado, "limpando" o código
+    const tecla = listaDeTeclas[contador];
+
+    //acessando uma das classes do botão
+    const instrumento = tecla.classList[1];
+
+    tecla.onclick = function (){
         tocaSom();
     }
     //criando uma função anônima, pois se colocasse direto a função com um parâmetro ele iria rodar o som sem o usuário ter feito nada
