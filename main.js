@@ -1,6 +1,11 @@
 //criando uma função
-function tocaSomPom (){
-    document.querySelector('#som_tecla_pom').play();
+// function tocaSomPom (){
+//     document.querySelector('#som_tecla_pom').play();
+// }
+
+//função com parâmetro
+function tocaSom (idElementoAudio){
+    document.querySelector(idElementoAudio).play();
 }
 
 //document.querySelector('.tecla_pom').onclick = tocaSomPom;
@@ -16,7 +21,7 @@ let contador = 0;
 //percorrendo uma lista
 //enquanto o contador for menor que o tamanho da lista de teclas
 while (contador < listaDeTeclas.length){
-    listaDeTeclas[contador].onclick = tocaSomPom;
+    listaDeTeclas[contador].onclick = tocaSom;
 
     //incrementando o contador
     contador = contador + 1;
