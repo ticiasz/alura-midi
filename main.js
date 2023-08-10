@@ -21,7 +21,10 @@ let contador = 0;
 //percorrendo uma lista
 //enquanto o contador for menor que o tamanho da lista de teclas
 while (contador < listaDeTeclas.length){
-    listaDeTeclas[contador].onclick = tocaSom;
+    listaDeTeclas[contador].onclick = function (){
+        tocaSom();
+    }
+    //criando uma função anônima, pois se colocasse direto a função com um parâmetro ele iria rodar o som sem o usuário ter feito nada
 
     //incrementando o contador
     contador = contador + 1;
