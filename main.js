@@ -25,7 +25,7 @@ while (contador < listaDeTeclas.length){
     //criando uma constante para um valor muito usado, "limpando" o código
     const tecla = listaDeTeclas[contador];
 
-    //acessando uma das classes do botão
+    //acessando a segunda classe do botão
     const instrumento = tecla.classList[1];
 
     //template string - "abrindo" espaço de código dentro de uma string
@@ -39,5 +39,6 @@ while (contador < listaDeTeclas.length){
     //incrementando o contador
     contador = contador + 1;
 
+    //imprimindo o valor do contador
     console.log(contador);
 }
