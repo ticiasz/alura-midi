@@ -56,7 +56,11 @@ for (let contador = 0; contador < listaDeTeclas.length; contador++){
     }
 
     //chama a função quando uma tecla é pressionada
-    tecla.onkeydown = function (){
+    tecla.onkeydown = function (evento){
+        //o evento vai receber o conjunto de informações atreladas ao que chamou aquela função, no caso, a tecla que pressionamos
+
+        console.log(evento);
+
         //adiciono a classe "ativa" na tecla
         tecla.classList.add("ativa");
     }
