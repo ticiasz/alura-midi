@@ -16,11 +16,11 @@ function tocaSom (idElementoAudio){
 const listaDeTeclas = document.querySelectorAll('.tecla')
 
 //criando uma variável
-let contador = 0;
+//let contador = 0;
 
 //percorrendo uma lista
 //enquanto o contador for menor que o tamanho da lista de teclas
-while (contador < listaDeTeclas.length){
+/*while (contador < listaDeTeclas.length){
 
     //criando uma constante para um valor muito usado, "limpando" o código
     const tecla = listaDeTeclas[contador];
@@ -41,4 +41,18 @@ while (contador < listaDeTeclas.length){
 
     //imprimindo o valor do contador
     console.log(contador);
+}*/
+
+//para
+//faz a mesma coisa que o while, mas de uma forma mais enxuta
+for (let contador = 0; contador < listaDeTeclas.length; contador++){
+
+    const tecla = listaDeTeclas[contador];
+    const instrumento = tecla.classList[1];
+    const idAudio = `#som_${instrumento}`;
+
+    tecla.onclick = function (){
+        tocaSom(idAudio);
+    }
 }
+//é uma boa prática deixar uma linha vazia no final do código
