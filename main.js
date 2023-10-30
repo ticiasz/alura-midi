@@ -61,8 +61,11 @@ for (let contador = 0; contador < listaDeTeclas.length; contador++){
 
         console.log(evento);
 
-        //adiciono a classe "ativa" na tecla
-        tecla.classList.add("ativa");
+        //se o código da tecla for "space", adiciona o "ativa"
+        if (evento.code == "Space"){
+            //adiciono a classe "ativa" na tecla
+            tecla.classList.add("ativa");
+        }
     }
 
     tecla.onkeyup = function (){
