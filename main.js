@@ -55,11 +55,14 @@ for (let contador = 0; contador < listaDeTeclas.length; contador++){
         tocaSom(idAudio);
     }
 
+    //chama a função quando uma tecla é pressionada
     tecla.onkeydown = function (){
+        //adiciono a classe "ativa" na tecla
         tecla.classList.add("ativa");
     }
 
     tecla.onkeyup = function (){
+        //retira a classe "ativa" quando a tecla não é mais pressionada
         tecla.classList.remove("ativa");
     }
 }
