@@ -78,7 +78,7 @@ for (let contador = 0; contador < listaDeTeclas.length; contador++){
         console.log(evento);
 
         //se o código da tecla for "space", adiciona o "ativa"
-        if (evento.code == "Space" || evento.code == "Enter"){
+        if (evento.code === "Space" || evento.code === "Enter"){
             //adiciono a classe "ativa" na tecla
             tecla.classList.add("ativa");
         }
