@@ -12,6 +12,7 @@ function tocaSom (seletorAudio){
     const elemento = document.querySelector(seletorAudio);
 
     //se o elemento existir, ele deve ter a tag "audio" para rodar o som
+    //dá pra deixar apenas o elemento, sem o != null pois o if considera true se o elemento existir
     if (elemento != null && elemento.localName === 'audio'){
         elemento.play();
     } else{
