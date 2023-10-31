@@ -4,8 +4,22 @@
 // }
 
 //função com parâmetro
-function tocaSom (idElementoAudio){
-    document.querySelector(idElementoAudio).play();
+// function tocaSom (idElementoAudio){
+//     document.querySelector(idElementoAudio).play();
+// }
+
+function tocaSom (seletorAudio){
+    const elemento = document.querySelector(seletorAudio);
+
+    if (elemento === null){
+        alert("Elemento não encontrado!");
+    }
+
+    if (elemento != null){
+        if (elemento.localName === 'audio'){
+            elemento.play();
+        }
+    }
 }
 
 //document.querySelector('.tecla_pom').onclick = tocaSomPom;
